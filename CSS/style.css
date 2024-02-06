@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Supercharge;
+    src: url(../fonts/Supercharge3D.otf);
+    /* src: url(../fonts/SuperchargeHalftone.otf); */
+    /* src: url(../fonts/SuperchargeCondensed.otf); */
+    /* src: url(../fonts/SuperchargeExpanded.otf); */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(161, 161, 161);
+    color: azure;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: Supercharge;
+    font-size: 4vw;
+    /* font-size: 15px; */
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    font-family: Supercharge;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(161, 161, 161);
+    padding: 35px 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(161, 161, 161);
+}
+
+li {
+    /* height: 30vh; */
+    height: 20vh;
+    flex-grow: 1;
+}
+
+li:hover {
+    z-index: 1;
+    /* trečioji ašis, kad pav būtų virš visų foto hover režime */
+}
+
+li:last-child {
+    flex-grow: 0;
+}
+
+img {
+    max-height: 100%;
+    /* rodo pav teisingai pagal jų aukštį ir plotį */
+    min-width: 100%;
+    object-fit: cover;
+    /* pilnai užpildytų erdvę */
+    filter: grayscale(100%) brightness(65%);
+    /* foto darosi nespalvotos ir šviesesnės */
+    transition: all 0.25s;
+}
+
+img:hover {
+    filter: grayscale(0%) brightness(100%);
+    /* 3d efektui: */
+    transform: scale(1.1);
+    /* 1.1 nurodo padidėjimą 10% */
+    box-shadow: 0 0 50px 10px darkgrey;
+    /* šešėlis */
+}
